@@ -6,12 +6,15 @@
     border-radius: 2px;
 }
 
+body {
+    margin: 0;
+}
+
 
 /* CSS News */
 
 #news .list {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 0;
 }
 
@@ -39,4 +42,14 @@
     padding: 8px 16px;
     background-color: #ffab40;
     color: #FFF;
+}
+
+
+/* CSS Article */
+
+.article .cover {
+    height: 180px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }

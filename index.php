@@ -433,7 +433,7 @@ require_once "db/db.php";
                         <p><?php echo $news['SHORT_TEXT']; ?></p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Подробнее</a>
+                        <a href="/article.php?id=<?php echo $news['ID']; ?>">Подробнее</a>
                     </div>
                 </div>
             <?php endforeach; ?>

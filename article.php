@@ -1,6 +1,9 @@
 <?php
     //подключаем базу
     require_once "db/db.php";
+    //получаем открытую статью
+    $article = $db->query('SELECT * FROM news WHERE id = ?', [$_GET['id']])[0];
+    if($article == null) {header('Location: /news.php'); exit();}
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +11,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Все новости</title>
+    <title><?php echo $article['NAME'];?></title>
 
     <noscript>
         <link rel="stylesheet" href="compiled.min.css">
@@ -76,46 +79,13 @@
         </div>
     </header>
 
-    
-    <?php 
-        //получаем список новостей из базы
-        $_news = $db->query('SELECT * FROM news ORDER BY ID DESC');
-    ?>
 
-    <div id="news" class="section">
+    <div id="news" class="section article">
+        <div class="container-fluid cover" style="background-image: url(<?php echo $article['PHOTO'];?>);"></div>
         <div class="container">
-        <h2>Новости</h2>
-        <?php 
-            $item = 0;
-            foreach($_news as $news): 
-                if($item == 0)
-                {
-            ?>
-                <div class="row list">
-                <?php } ?>
-                <div class="card item" id="news_<?php echo $news['ID'];?>">
-                    <div class="card-image cover">
-                        <img src="<?php echo $news['PHOTO']; ?>">
-                    </div>
-                    <div class="card-content text-main">
-                        <span class="card-title title"><?php echo $news['NAME']; ?></span>
-                        <p><?php echo $news['SHORT_TEXT']; ?></p>
-                    </div>
-                    <div class="card-action">
-                        <a href="/article.php?id=<?php echo $news['ID']; ?>">Подробнее</a>
-                    </div>
-                </div>
-                <?php
-                $item++;
-                if($item > 2){ 
-                    $item = 0;
-                    ?>
-                    </div>
-                <?php } ?>
-        <?php 
-            endforeach; 
-        
-        ?>
+            <h2 class="title"><?php echo $article['NAME'];?></h2>
+            <pre class="text"><?php echo $article['TEXT'];?></pre>
+            <pre class="text"><?php echo $article['DATE'];?></pre>
         </div>
     </div>
 

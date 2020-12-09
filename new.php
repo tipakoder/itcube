@@ -1,7 +1,8 @@
 <?php
     //определяем пароль для доступа к загрузке
-    $passwd = "1234";
-    if($_GET['password'] != $passwd) header('Location: /');
+    $login = "admin";
+    $passwd = '$2y$10$Oiccyxh6RXMXpHucRJ8.xOAZ6IfnLeI1I361pkf/zf748QzXv8dMS';
+    if(!password_verify($_GET['password'], $passwd) || $_GET['login'] != $login) header('Location: /');
     //подключаем базу
     require_once 'db/db.php';
     //процесс загрузки
@@ -46,6 +47,7 @@
             
             body {
                 margin: 0;
+                background-color: #eee;
             }
             
             .title {
@@ -60,13 +62,17 @@
             
             .form-group label {
                 padding-bottom: 8px;
+                color: #ffab40;
             }
             
             .form-group .form-el {
-                border: 1px solid #333;
+                border: 1px solid #ffab40;
+                border-radius: 8px;
                 padding: 8px 16px;
                 width: 100%;
+                color: #ffab40;
                 margin-bottom: 8px;
+                background-color: #FFF;
             }
         </style>
     </head>
