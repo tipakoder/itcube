@@ -1,0 +1,481 @@
+@import "http://fonts.fontstorage.com/import/angleciatitle.css";
+
+
+body {
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-family: "Tahoma", sans-serif;
+    overflow-x: hidden;
+}
+
+.header-slider {
+    width: 100%;
+    overflow: hidden;
+}
+.header-slider h2 {
+    color: #fff;
+}
+h2 {
+    color: #333;
+}
+
+.primary-btn {
+    background-color: #ffab40;
+    line-height: 42px;
+    margin-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    -webkit-transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    cursor: pointer;
+    border: 1px solid #ffab40;
+    position: relative;
+}
+
+.primary-btn:hover {
+    border: 1px solid #333;
+    background: 0 0;
+    color: #333;
+}
+
+.primary-btn:focus {
+    outline: none;
+}
+
+.slider-button:hover {
+    border: 1px solid #fff;
+    background: 0 0;
+    color: #fff;
+}
+
+.header-slider-container h2 {
+    max-width: 800px;
+    font-size: 57px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.header-slider-container {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    opacity: 0.5;
+}
+
+.header-slide-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    bottom: 0;
+}
+
+.header-slider-item {
+    border-radius: 5px;
+
+    /*width: 90%;*/
+    height: 80vh;
+    /*margin-left: 3%;*/
+    /*transform: translate(5%, 5%);*/
+
+    outline: none;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 25px;
+    position: relative;
+    filter: drop-shadow(7px 8px 17px rgba(0, 0, 0, 0.2));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 50px;
+    transition: all 0.3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hidden-slide {
+    display: none;
+    margin-left: 0;
+    transform: translate(0%, 0%);
+}
+
+.header-slider-container {
+    color: #fff;
+    z-index: 1;
+}
+
+.flickity-viewport {
+    overflow: inherit;
+}
+
+.selected-page {
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: block;
+    transform: translate(0%, 0%);
+    margin-left: 0;
+}
+
+.header-slider.selected-slide .flickity-button,
+.header-slider.selected-slide .flickity-page-dots {
+    display: none;
+}
+
+.flickity-page-dots {
+    bottom: 10px;
+}
+
+.flickity-button, .flickity-button:active, .flickity-button:hover {
+    background: none;
+}
+
+.flickity-page-dots .dot {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    margin: 0 3px;
+    background: #fff;
+    border-radius: 0;
+    opacity: .25;
+    cursor: pointer;
+}
+
+.menu ul {
+
+}
+
+.header a:hover, .header a:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    background-color: #3f5172;
+}
+
+.flickity-page-dots .dot {
+    transition: height 0.2s ease-in-out;
+}
+
+.flickity-page-dots .dot.is-selected, .flickity-page-dots .dot:hover {
+    height: 7px !important;
+}
+
+.modal {
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*max-height: none;*/
+    /*height: 100% !important;*/
+    /*background-color: rgba(0,0,0,0.4);*/
+    background: none;
+    /*top: 0 !important;*/
+    border-radius: 5px;
+    /*left: 0;*/
+    /*right: 0;*/
+    height: auto !important;
+}
+
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.modal img {
+    width: 100%;
+    margin-bottom: -6px;
+}
+
+.modal-it-info .modal-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#image_modal {
+    /*position: absolute;*/
+    /*opacity: 0;*/
+}
+/*.slider-modal .slick-track {*/
+/*    width: 100% !important;*/
+/*}*/
+/*.restyleSlick {*/
+/*    width: 100% !important;*/
+/*    height: 100% !important;*/
+
+/*}*/
+.modal-it-info .modal-close i {
+    font-size: 2.5rem;
+    color: #676767;
+}
+
+.modal-it-info {
+    padding-top: 50px !important;
+}
+
+.header-slider {
+    margin: 0 auto;
+    /*margin-top: 50px;*/
+}
+
+.text-main {
+    color: #353535;
+    font-size: 17px;
+}
+.about-image .slick-list {
+    border-radius: 5px;
+    filter: drop-shadow(7px 8px 17px rgba(0, 0, 0, 0.2));
+}
+.about-image div {
+    height: 100%;
+}
+.about-image {
+    cursor: pointer;
+    height: 100%;
+}
+.next, .next-team {
+    left: 18px;
+}
+.prev, .prev-team {
+    right: 18px;
+}
+.prev-next:hover > i {
+    background-color: rgba(0,0,0,0.1);
+}
+.prev-next > i {
+    color: #fff;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 5px;
+    font-size: 40px;
+    transition: 0.2s ease-in-out;
+}
+.prev-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.about-image-item {
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    max-height: 682px;
+}
+.modal-it-info {
+    background-color: rgba(0,0,0,0.3);
+}
+.carousel-item {
+    width: 80%;
+}
+
+table.footer .subscribe-image {
+    display: none;
+}
+#activity .active {
+    min-width: 300px;
+    overflow: auto;
+}
+#activity .active iframe {
+    width: 100%;
+    min-width: 600px;
+}
+.section > div {
+    position: relative;
+}
+.section > .container > h2 {
+    font-family: 'Anglecia Pro Tit', serif;
+    color: #333;
+}
+.section > .container > h2:after {
+    margin-top: 10px;
+    content: ' ';
+    width: 100px;
+    display: block;
+    height: 3px;
+    background-color: #ffab40;
+}
+body .section:nth-child(2n) {
+    background-color: #fbfbfc;
+}
+.sidenav-overlay {
+    z-index: 996;
+}
+.directions-sidebar {
+    z-index: 1;
+    position: absolute;
+}
+.directions-sidebar ul {
+    padding: 0;
+}
+
+.dir-title {
+    margin-left: 15px;
+    min-width: 245px;
+    width: 245px;
+    max-width: 245px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dir-icon {
+    box-sizing: content-box;
+    margin: 9px;
+    font-size: 40px;
+}
+.directions-sidebar li > a {
+    display: flex;
+    align-items: center;
+    width: 55px;
+    min-height: 82px;
+    color: #696969;
+    overflow: hidden;
+    border-bottom: 1px solid #fff;
+    transition: 0.3s;
+    background-color: #f3f3f3;
+}
+.directions-sidebar li > a:hover {
+    background-color: #ffaa40;
+    width: 300px;
+    color: #fff;
+}
+.selected-direction {
+    background-color: #ffaa40 !important;
+    color: #fff !important;
+}
+.directions {
+    display: flex;
+}
+.direction-body {
+    margin-left: 80px;
+}
+.direction-body-text {
+    height: 490px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+.get-it-now h4 {
+    margin-top: 0;
+    font-family: 'Anglecia Pro Tit', serif;
+    color: #444;
+    text-align: center;
+}
+.btn:hover, .btn-large:hover, .btn-small:hover, .btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
+    background-color: #3f5172;
+}
+
+.direction-item, .direction-body {
+    width: 100%;
+    min-height: 525px;
+}
+.team-name {
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Anglecia Pro Tit', serif;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.team-dol {
+    font-size: 15px;
+    color: #888;
+    text-align: center;
+    margin-top: 0;
+}
+.our-team img {
+    width: 240px;
+    margin: 0 auto;
+}
+.direction-body-text > div {
+    transition: all 0.5s;
+    background-color: #fff;
+    position: absolute !important;
+}
+.get-it-now h4:after {
+    content: ' ';
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+    height: 3px;
+    background-color: #ffab40;
+}
+.dir-current {
+    opacity: 1;
+    position: relative;
+    transform: translate(0, 0);
+}
+.dir-hide {
+    opacity: 0;
+
+    transform: translate(110%, 0);
+}
+.directions-sidebar li > a:hover .dir-title {
+
+}
+.logo-small {
+    display: none;
+}
+.how-to-get li {
+    padding-bottom: 30px;
+    border-left: 1px solid #ffab40;
+    position: relative;
+    font-size: 18px;
+    padding-left: 40px;
+}
+.how-to-get li:before {
+    position: absolute;
+    top: -20px;
+    content: attr(data-step);
+    left: 0;
+    box-sizing: content-box;
+    transform: translate(-53%);
+    padding: 7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: normal;
+    background-color: #ffab40;
+    display: block;
+}
+
